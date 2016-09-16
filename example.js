@@ -33,5 +33,12 @@ garageDoor.login(function(err, res) {
       if(err) throw err;
       console.log(device);
     });
+    
+    //  close that door
+    garageDoor.setDoorState(device.id, 0, function(err, device) {
+      if(err) throw err;
+      console.log(device);
+    });
+    
   });
 });
